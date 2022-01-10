@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 30px;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.links{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 50px;
+}
