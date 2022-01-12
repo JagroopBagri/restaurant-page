@@ -1,6 +1,12 @@
-// function that loads home page
+// function that loads about page
 
-function loadHome(){
+function loadAbout(){
+    let divs = document.querySelectorAll('div');
+    let images = document.querySelectorAll('img');
+    images.forEach(image => image.remove());
+    for(let n = 1; n < divs.length; n++){
+        divs[n].remove();
+    };
     let content = document.querySelector('#content');
         let header = document.createElement('div');
         header.classList.add('header');
@@ -33,22 +39,17 @@ function loadHome(){
             let info = document.createElement('div');
             info.classList.add('info');
             body.appendChild(info);
-                let enjoy = document.createElement('div');
-                enjoy.classList.add('enjoy');
-                enjoy.textContent = 'Enjoy snacks & beverages made from 100% natural ingredients sourced from local farmers.'
-                info.appendChild(enjoy);
-                let menuButton = document.createElement('button');
-                menuButton.type = 'button';
-                menuButton.textContent = 'Menu';
-                info.appendChild(menuButton);
-            let homepagePics = document.createElement('div');
-            homepagePics.classList.add('homePagePics');
-            body.appendChild(homepagePics);
-                let homeImage = document.createElement('img');
-                homeImage.src = '../images/fruitsAndVegetables.jpeg';
-                homeImage.classList.add('pic1');
-                homeImage.width = '550';
-                homepagePics.appendChild(homeImage);
+                let aboutText = document.createElement('div');
+                aboutText.classList.add('aboutText');
+                aboutText.textContent = 'Organics is a family owned establishment dedicated to bringing you natural and organic food. All of our ingredients are sourced from local farmers and are non-GMO. Come enjoy snacks and beverages that are not only tasty, but also healthy!'
+                info.appendChild(aboutText);
+            let hours = document.createElement('div');
+            hours.classList.add('hours');
+            body.appendChild(hours);
+                let times = document.createElement('div');
+                times.classList.add('times');
+                times.textContent = "MON: 8am to 5pm\r\nTUE: 8am to 5pm\r\nWED: 8am to 5pm\r\nTHU: 8am to 5pm\r\nFRI: 8am to 5pm\r\nSAT: 10am to 8pm\r\nSUN: Closed";
+                hours.appendChild(times);
 };
 
-export { loadHome };
+export { loadAbout };
