@@ -1,1 +1,4 @@
-console.log('testing');
+import { loadHome } from './homePage';
+
+loadHome();
+
