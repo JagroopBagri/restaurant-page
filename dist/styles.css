@@ -7,15 +7,17 @@ body{
     background-color: rgb(255, 242, 224);
     height: 100vh;
     width: 100vw;
+    overflow: auto;
 }
 #content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     height: 100%;
     width: 100%;
     max-height: 1200px;
+    overflow: auto;
 }
 .header{
     display: flex;
@@ -53,11 +55,12 @@ h1{
     justify-content: space-around;
     width: 85%;
     height: 70%;
-    overflow: hidden;
+    overflow: auto;
     text-align: center;
     gap: 10px;
     padding: 5px;
     min-width: 900px;
+    min-height: 400px;
     font-family: sans-serif;
 }
 .info{
@@ -141,4 +144,39 @@ button:hover{
     text-align: left;
     line-height: 1.8em;
     color: rgb(253, 94, 37);
+}
+.body2{
+    border-style: hidden;
+    border-color: rgb(253, 94, 37);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 85%;
+    height: 70%;
+    overflow: auto;
+    gap: 10px;
+    padding: 5px;
+    min-width: 900px;
+    min-height: 400px;
+    font-family: sans-serif;
+}
+input{
+    padding: .2em;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+label{
+    text-decoration: underline;
+}
+#message{
+    border-width: 1px;
+    border-radius: 5px;
+    height: 50%;
+    width: 50%;
+    resize: none;
+    padding: .5em;
+    min-height: 100px;
 }
