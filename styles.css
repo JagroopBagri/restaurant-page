@@ -8,13 +8,17 @@ body{
     height: 100vh;
     width: 100vw;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 #content{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    height: 100%;
+    height: 95%;
     width: 100%;
     max-height: 1200px;
     overflow: auto;
@@ -50,9 +54,10 @@ h1, .links:hover{
     cursor: pointer;
 }
 .body{
-    border-style: hidden;
+    border-style: solid;
     border-color: rgb(253, 94, 37);
     border-radius: 25px;
+    border-width: 5px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -67,7 +72,8 @@ h1, .links:hover{
     font-family: sans-serif;
 }
 .info{
-    border-style: solid;
+    border-style: hidden;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -123,6 +129,10 @@ button:hover{
 .pic1{
     width: 100%;
     height: 100%;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: rgb(253, 94, 37);
+    margin-right: 25px;
 }
 .aboutText{
     width: 75%;
@@ -141,6 +151,7 @@ button:hover{
     font-weight: 300;
     font-family: sans-serif;
     border-style: dotted;
+    padding: .3em;
     border-width: .2em;
     border-color:rgb(253, 94, 37);
     white-space: pre;
@@ -149,9 +160,10 @@ button:hover{
     color: rgb(253, 94, 37);
 }
 .body2{
-    border-style: hidden;
+    border-style: solid;
     border-color: rgb(253, 94, 37);
     border-radius: 25px;
+    border-width: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,7 +204,7 @@ label{
     justify-content: space-evenly;
     color: rgb(253, 94, 37);
     font-size: 1.3rem;
-    text-decoration: underline;
+    font-style: italic;
 }
 .prices{
     width: 40%;
@@ -202,5 +214,30 @@ label{
     justify-content: space-evenly;
     color: rgb(253, 94, 37);
     font-size: 1.3rem;
-    text-decoration: underline;
+    font-style: italic;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3vh;
+    width:220px;
+    font-size: .8rem;
+    background-color: transparent;
+    color: black;
+}
+
+footer, p, a, img{
+    background-color: transparent;
+}
+
+.fa-github {
+    color: black;
+    font-size: 24px;
+    transition: transform 0.2s ease-in-out;
+}
+    
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.3);
 }
