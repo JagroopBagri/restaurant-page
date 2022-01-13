@@ -3,7 +3,7 @@
 function loadContact(){
     let divs = document.querySelectorAll('div');
     let images = document.querySelectorAll('img');
-    for (let n = 1; n < images.length; n++){
+    for (let n = 1; n < images.length - 1; n++){
         images[n].remove();
     }
     for(let n = 3; n < divs.length; n++){
@@ -38,11 +38,15 @@ function loadContact(){
             let messageInput = document.createElement('textarea');
             messageInput.id = 'message';
             messageInput.name = 'message';
+            messageInput.placeholder = 'We would love to hear from you!';
             body2.appendChild(messageInput);
             let submitButton = document.createElement('button');
             submitButton.type = 'button';
             submitButton.textContent = 'Submit';
             body2.appendChild(submitButton);
+            const footer = document.querySelector('.footer')
+const currentYear = new Date().getFullYear();
+footer.textContent = 'Copyright © ' + currentYear + ' Jagroop Bagri'
 };
 
 export { loadContact };

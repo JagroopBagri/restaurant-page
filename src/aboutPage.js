@@ -3,7 +3,7 @@
 function loadAbout(){
     let divs = document.querySelectorAll('div');
     let images = document.querySelectorAll('img');
-    for (let n = 1; n < images.length; n++){
+    for (let n = 1; n < images.length - 1; n++){
         images[n].remove();
     };
     for(let n = 3; n < divs.length; n++){
@@ -25,8 +25,11 @@ function loadAbout(){
             body.appendChild(hours);
                 let times = document.createElement('div');
                 times.classList.add('times');
-                times.textContent = "MON: 8am to 5pm\r\nTUE: 8am to 5pm\r\nWED: 8am to 5pm\r\nTHU: 8am to 5pm\r\nFRI: 8am to 5pm\r\nSAT: 10am to 8pm\r\nSUN: Closed";
+                times.textContent = "MON: 8am to 5pm\r\nTUE: 8am to 5pm\r\nWED: 8am to 5pm\r\nTHU: 8am to 5pm\r\nFRI: 8am to 5pm\r\nSAT: 10am to 8pm\r\nSUN: CLOSED";
                 hours.appendChild(times);
+                const footer = document.querySelector('.footer')
+                const currentYear = new Date().getFullYear();
+                footer.textContent = 'Copyright © ' + currentYear + ' Jagroop Bagri'
 };
 
 export { loadAbout };

@@ -3,7 +3,7 @@
 function loadMenu(){
     let divs = document.querySelectorAll('div');
     let images = document.querySelectorAll('img');
-    for (let n = 1; n < images.length; n++){
+    for (let n = 1; n < images.length - 1; n++){
         images[n].remove();
     };
     for(let n = 3; n < divs.length; n++){
@@ -61,6 +61,9 @@ function loadMenu(){
                 let cheesePrice = document.createElement('div');
                 cheesePrice.textContent = '$6';
                 prices.appendChild(cheesePrice);
+                const footer = document.querySelector('.footer')
+const currentYear = new Date().getFullYear();
+footer.textContent = 'Copyright © ' + currentYear + ' Jagroop Bagri'
 };
 
 export { loadMenu };

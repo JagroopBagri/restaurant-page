@@ -5,7 +5,7 @@ import { loadMenu } from './menuPage';
 function loadHome(){
     let divs = document.querySelectorAll('div');
     let images = document.querySelectorAll('img');
-    for (let n = 1; n < images.length; n++){
+    for (let n = 1; n < images.length - 1; n++){
         images[n].remove();
     }
     for(let n = 3; n < divs.length; n++){
@@ -66,6 +66,9 @@ function loadHome(){
                 homeImage.classList.add('pic1');
                 homeImage.width = '550';
                 homepagePics.appendChild(homeImage);
+                const footer = document.querySelector('.footer')
+const currentYear = new Date().getFullYear();
+footer.textContent = 'Copyright © ' + currentYear + ' Jagroop Bagri'
 };
 
 export { loadHome };
