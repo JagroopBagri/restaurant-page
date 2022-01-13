@@ -20,7 +20,7 @@ function loadHome(){
             logo.classList.add('logo');
             header.appendChild(logo);
                 let mango = document.createElement('img');
-                mango.src = '../images/mango.png';
+                mango.src = '/images/mango.png';
                 mango.width = '125';
                 logo.appendChild(mango);
                 let organics = document.createElement('h1');
@@ -62,7 +62,7 @@ function loadHome(){
             homepagePics.classList.add('homePagePics');
             body.appendChild(homepagePics);
                 let homeImage = document.createElement('img');
-                homeImage.src = '../images/fruitsAndVegetables.jpeg';
+                homeImage.src = '/images/fruitsAndVegetables.jpeg';
                 homeImage.classList.add('pic1');
                 homeImage.width = '550';
                 homepagePics.appendChild(homeImage);
