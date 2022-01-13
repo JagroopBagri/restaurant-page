@@ -3,36 +3,13 @@
 function loadAbout(){
     let divs = document.querySelectorAll('div');
     let images = document.querySelectorAll('img');
-    images.forEach(image => image.remove());
-    for(let n = 1; n < divs.length; n++){
+    for (let n = 1; n < images.length; n++){
+        images[n].remove();
+    };
+    for(let n = 3; n < divs.length; n++){
         divs[n].remove();
     };
     let content = document.querySelector('#content');
-        let header = document.createElement('div');
-        header.classList.add('header');
-        content.appendChild(header);
-            let logo = document.createElement('div');
-            logo.classList.add('logo');
-            header.appendChild(logo);
-                let mango = document.createElement('img');
-                mango.src = '../images/mango.png';
-                mango.width = '125';
-                logo.appendChild(mango);
-                let organics = document.createElement('h1');
-                organics.textContent = 'ORGANICS';
-                logo.appendChild(organics);
-            let links = document.createElement('ul');
-            links.classList.add('links');
-            header.appendChild(links);
-                let menu = document.createElement('li');
-                menu.textContent = 'Menu';
-                links.appendChild(menu);
-                let about = document.createElement('li');
-                about.textContent = 'About';
-                links.appendChild(about);
-                let contact = document.createElement('li');
-                contact.textContent = 'Contact';
-                links.appendChild(contact);
         let body = document.createElement('div');
         body.classList.add('body');
         content.appendChild(body);

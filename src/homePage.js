@@ -1,7 +1,18 @@
+import { loadMenu } from './menuPage';
+
 // function that loads home page
 
 function loadHome(){
+    let divs = document.querySelectorAll('div');
+    let images = document.querySelectorAll('img');
+    for (let n = 1; n < images.length; n++){
+        images[n].remove();
+    }
+    for(let n = 3; n < divs.length; n++){
+        divs[n].remove();
+    };
     let content = document.querySelector('#content');
+    if(document.querySelector('.header') === null){
         let header = document.createElement('div');
         header.classList.add('header');
         content.appendChild(header);
@@ -20,13 +31,17 @@ function loadHome(){
             header.appendChild(links);
                 let menu = document.createElement('li');
                 menu.textContent = 'Menu';
+                menu.classList.add('menu');
                 links.appendChild(menu);
                 let about = document.createElement('li');
                 about.textContent = 'About';
+                about.classList.add('about');
                 links.appendChild(about);
                 let contact = document.createElement('li');
                 contact.textContent = 'Contact';
+                contact.classList.add('contact');
                 links.appendChild(contact);
+    };
         let body = document.createElement('div');
         body.classList.add('body');
         content.appendChild(body);
@@ -41,6 +56,8 @@ function loadHome(){
                 menuButton.type = 'button';
                 menuButton.textContent = 'Menu';
                 info.appendChild(menuButton);
+                menuButton.addEventListener('click', () =>
+                loadMenu())
             let homepagePics = document.createElement('div');
             homepagePics.classList.add('homePagePics');
             body.appendChild(homepagePics);
